@@ -25,4 +25,3 @@ yarn-error.log*
 debug.log
 .eslintcache
 
-node_modules
