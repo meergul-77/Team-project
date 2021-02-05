@@ -4,7 +4,7 @@ import Navbar from '../Navbar/Navbar';
 import './ProductDetails.css'
 const ProductToDetails = (props) => {
     const { productToDetails, detailsTodo } = useContext(productContext)
-
+    console.log("kkkkkk", productToDetails);
     useEffect(() => {
         detailsTodo(props.match.params.id)
     }, [])
