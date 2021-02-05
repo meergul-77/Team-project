@@ -3,6 +3,7 @@ import SearchBar from '../SearchBar/SearchBar';
 import SearchProductList from '../SearchProductList/SearchProductList';
 import axios from 'axios';
 import './SearchFunction.css';
+import { JSON_API } from '../../../helpers/constants'
 const SearchFunction = (props) => {
   const [input, setInput] = useState('');
   const [countryList, setCountryList] = useState([]);
@@ -14,7 +15,7 @@ const SearchFunction = (props) => {
       return setInput([])
 
     } else {
-      let { data } = await axios(`http://localhost:8000/products?title_like=${input}`)
+      let { data } = await axios(`${JSON_API}/products?title_like=${input}`)
       setCountryList(data)
       setInput(input);
     }
