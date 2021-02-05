@@ -68,7 +68,7 @@ export default function ProductCarditem({ item }) {
             <Card >
                 <CardHeader
                     title={<Typography variant="h5" align="center">{item.title}</Typography>}
-                /><Link to={`/details` + item.id}>
+                /><Link to={`/details/` + item.id}>
                     <CardMedia
                         className={classes.media}
                         image={item.img}
